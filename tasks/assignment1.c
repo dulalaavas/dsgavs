@@ -72,4 +72,5 @@ int main(){
     // scanf("%f", &time2);
     // compoundInterest = principle2 * pow((1 + rate2 / 100), time2)- principle2;
     // printf("The compound interest is: %1.3f \n", compoundInterest);
+
 }
