@@ -61,7 +61,7 @@ int main(){
 //     scanf("%f", &width1);
 //     perimeter = 2 * (length1 + width1);
 //     printf("The perimeter of the rectangle is: %1.3f \n", perimeter);
-// z
+
 // calculate compound interest
     float principle2, rate2, time2, compoundInterest;
     printf("Enter principle amount:");
