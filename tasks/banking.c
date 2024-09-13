@@ -1,40 +1,46 @@
-#include<stdio.h>
-int main(){
-    //bank account with initial Rs.10000 and able to deposit and withdraw
-    float balance = 10000, deposit, withdraw, check_balance, exit;
+#include <stdio.h>
+
+int main() {
+    float balance = 10000.0, deposit, withdraw;
     int option;
+
+    while (1) { // Loop to keep showing the menu until the user chooses to exit
         printf("Welcome to your bank account. \n");
-        printf("Your current balance is Rs.10000. \n");
+        printf("Your current balance is Rs.%1.2f. \n", balance);
         printf("Enter 1 to deposit money. \n");
         printf("Enter 2 to withdraw money. \n");
         printf("Enter 3 to check your balance. \n");
         printf("Enter 4 to exit. \n");
+        
         scanf("%d", &option);
-        if (option == 1){ //deposit amount
+
+        if (option == 1) { // Deposit amount
             printf("Enter amount to deposit: ");
             scanf("%f", &deposit);
-            if (deposit > 0){ //valid deposit amount
+            if (deposit > 0) { // Valid deposit amount
                 balance += deposit;
-                printf("Your current balance is Rs.%1.3f. \n", balance);
-            }else{ //invalid deposit amount
+                printf("Deposit successful. Your current balance is Rs.%1.2f. \n", balance);
+            } else { // Invalid deposit amount
                 printf("Invalid amount. Please try again. \n");
-                printf("Your current balance is Rs.%1.3f. \n", balance);
             }
-        }else if(option == 2);{ //withdraw amount
-                printf("Enter amount to withdraw: ");
-                scanf("%f", &withdraw);
-                if (withdraw > 0 && withdraw <= balance){ //valid withdraw amount 
-                    balance -= withdraw;
-                    printf("Your current balance is Rs.%1.3f. \n", balance);
-                }else{ //invalid withdraw amount
-                    printf("Invalid amount. Please try again. \n");
-                    printf("Your current balance is Rs.%1.3f. \n", balance);
-                    }
-        }else if(option == 3);{ // check balance
-            printf("Your current balance is Rs.%1.3f. \n", balance);
-        }else if(option == 4);{ //exit
+        } else if (option == 2) { // Withdraw amount
+            printf("Enter amount to withdraw: ");
+            scanf("%f", &withdraw);
+            if (withdraw > 0 && withdraw <= balance) { // Valid withdraw amount
+                balance -= withdraw;
+                printf("Withdrawal successful. Your current balance is Rs.%1.2f. \n", balance);
+            } else { // Invalid withdraw amount
+                printf("Invalid amount or insufficient balance. Please try again. \n");
+            }
+        } else if (option == 3) { // Check balance
+            printf("Your current balance is Rs.%1.2f. \n", balance);
+        } else if (option == 4) { // Exit
             printf("Thank you for using our services. \n");
-        }else{ //invalid option
-            printf("Enter number from 1 to 4");
+            break; // Exit the loop
+        } else { // Invalid option
+            printf("Invalid option. Please enter a number from 1 to 4. \n");
         }
+    }
+
+    return 0;
 }
