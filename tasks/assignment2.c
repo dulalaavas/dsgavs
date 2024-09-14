@@ -45,4 +45,23 @@ int main(){
         //     printf("Your BMI is %f, you are obese.", bmi);
         // }
 
+    //calculate tax based on annual income
+    float income, tax;
+    printf("Enter your annual income: ");
+    scanf("%d", &income);
+    if (income >= 0 && income < 10000){
+        tax = income * 0;
+        printf("Your tax is: %1.3f \n",tax);
+    }else if(income > 10000 && income <= 50000){
+        tax = income * 10/100;
+        printf("Your tax is: %1.3f \n",tax);
+    }else if(income > 50000 && income <= 100000){
+        tax = income * 20/100;
+        printf("Your tax is: %1.3f \n",tax);
+    }else if(income > 100000){
+        tax = income * 30/100;
+        printf("Your tax is: %1.3f \n",tax);
+    }else{
+        printf("Please inter valid amount");
+    }
 }
