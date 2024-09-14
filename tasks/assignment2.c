@@ -83,6 +83,21 @@ int main(){
         // finalAmount = total - discount;
         // printf("Your final amount after discount is: %.2f\n", finalAmount);
 
-    //
-
+    //age above 21 can rent a car
+        int age;
+        char licensestatus;
+        printf("What is your age? : ");
+        scanf("%d", &age);
+        printf("Do you have a license? (y/n): ");
+        scanf(" %c", &licensestatus);
+        if (age >= 21 && licensestatus == 'y') {
+            printf("You can rent a car.\n");
+        } else if (age >= 21 && licensestatus == 'n') {
+            printf("Sorry, you cannot rent a car.\n");
+        } else if (age < 21) {
+            printf("Sorry, you cannot rent a car.\n");
+        } else {
+            printf("Enter valid input.\n");
+        }
+        
 }
