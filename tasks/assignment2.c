@@ -36,13 +36,13 @@ int main(){
         scanf("%f %f", &weight, &height);
         bmi = weight / (height * height);
         if (bmi < 18.5){
-            printf("Your BMI is %f, you are underweight.", bmi);
+            printf("Your BMI is %f, you are underweight. \n", bmi);
         }else if (bmi >= 18.5 && bmi < 25){
-            printf("Your BMI is %f, you are normal weight.", bmi);
+            printf("Your BMI is %f, you are normal weight. \n", bmi);
         }else if (bmi >= 25 && bmi < 30){
-            printf("Your BMI is %f, you are overweight.", bmi);
+            printf("Your BMI is %f, you are overweight. \n", bmi);
         }else{
-            printf("Your BMI is %f, you are obese.", bmi);
+            printf("Your BMI is %f, you are obese. \n", bmi);
         }
 
     //calculate tax based on annual income
@@ -62,10 +62,10 @@ int main(){
             tax = income * 30/100;
             printf("Your tax is: %1.3f \n",tax);
         }else{
-            printf("Please inter valid amount");
+            printf("Please inter valid amount \n");
         }
     
-    calculate discount per items
+    // calculate discount per items
         float items, total, discount, finalAmount;
         printf("How many items did you buy? : ");
         scanf("%f", &items);
