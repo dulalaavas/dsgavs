@@ -3,17 +3,13 @@
 int main() {
     float balance = 10000.0, deposit, withdraw;
     int option;
-
-    while (1) { // Loop to keep showing the menu until the user chooses to exit
         printf("Welcome to your bank account. \n");
         printf("Your current balance is Rs.%1.2f. \n", balance);
         printf("Enter 1 to deposit money. \n");
         printf("Enter 2 to withdraw money. \n");
         printf("Enter 3 to check your balance. \n");
         printf("Enter 4 to exit. \n");
-        
         scanf("%d", &option);
-
         if (option == 1) { // Deposit amount
             printf("Enter amount to deposit: ");
             scanf("%f", &deposit);
@@ -36,11 +32,7 @@ int main() {
             printf("Your current balance is Rs.%1.2f. \n", balance);
         } else if (option == 4) { // Exit
             printf("Thank you for using our services. \n");
-            break; // Exit the loop
         } else { // Invalid option
             printf("Invalid option. Please enter a number from 1 to 4. \n");
         }
     }
-
-    return 0;
-}
