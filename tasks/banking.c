@@ -35,4 +35,4 @@ int main() {
         } else { // Invalid option
             printf("Invalid option. Please enter a number from 1 to 4. \n");
         }
-    }
+}
