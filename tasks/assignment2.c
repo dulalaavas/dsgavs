@@ -49,7 +49,7 @@ int main(){
     float income, tax;
     printf("Enter your annual income: ");
     scanf("%d", &income);
-    if (income >= 0 && income < 10000){
+    if (income > 0 && income <= 10000){
         tax = income * 0;
         printf("Your tax is: %1.3f \n",tax);
     }else if(income > 10000 && income <= 50000){
