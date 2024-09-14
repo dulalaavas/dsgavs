@@ -65,25 +65,24 @@ int main(){
         //     printf("Please inter valid amount");
         // }
     
-    //calculaye discount per items
-        float items, total, discount;
-        printf("How many items did you buy? : ");
-        scanf("%1.2f", &items);
-        printf("What is your total amount? : \n");
-        scanf("%1.2f", &total);
-        if (items > 1 && items <= 10){
-            discount = total*5/100;
-            printf("Your final amount after discount is: \n");
-            scanf("%1.2f", &discount);
-        }else if (items > 1 && items <= 10){
-            discount = total*10/100;
-            printf("Your final amount after discount is: \n");
-            scanf("%1.2f", &discount);
-        }else if (items > 50){
-            discount = total*15/100;
-            printf("Your final amount after discount is: \n");
-            scanf("%1.2f", &discount);
-        }else{
-            printf("Invalid input. Please try again. \n");
-        }
+    //calculate discount per items
+        // float items, total, discount, finalAmount;
+        // printf("How many items did you buy? : ");
+        // scanf("%f", &items);
+        // printf("What is your total amount? : ");
+        // scanf("%f", &total);
+        // if (items > 1 && items <= 10) {
+        //     discount = total * 5 / 100;
+        // } else if (items > 10 && items <= 50) {
+        //     discount = total * 10 / 100;
+        // } else if (items > 50) {
+        //     discount = total * 15 / 100;
+        // } else {
+        //     printf("Invalid Input.\n");
+        // }
+        // finalAmount = total - discount;
+        // printf("Your final amount after discount is: %.2f\n", finalAmount);
+
+    //
+
 }
