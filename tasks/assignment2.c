@@ -20,7 +20,7 @@ int main(){
         //     printf("%c is not a vowel. \n", letter);
         // }
 
-    //checkk if the year is a leap year or not
+    //check if the year is a leap year or not
         // int year;
         // printf("Enter any year: ");
         // scanf("%d", &year);
@@ -46,22 +46,44 @@ int main(){
         // }
 
     //calculate tax based on annual income
-    float income, tax;
-    printf("Enter your annual income: ");
-    scanf("%f", &income);
-    if (income > 0 && income <= 10000){
-        tax = income * 0;
-        printf("Your tax is: %1.3f \n",tax);
-    }else if(income > 10000 && income <= 50000){
-        tax = income * 10/100;
-        printf("Your tax is: %1.3f \n",tax);
-    }else if(income > 50000 && income <= 100000){
-        tax = income * 20/100;
-        printf("Your tax is: %1.3f \n",tax);
-    }else if(income > 100000){
-        tax = income * 30/100;
-        printf("Your tax is: %1.3f \n",tax);
-    }else{
-        printf("Please inter valid amount");
-    }
+        // float income, tax;
+        // printf("Enter your annual income: ");
+        // scanf("%f", &income);
+        // if (income > 0 && income <= 10000){
+        //     tax = income * 0;
+        //     printf("Your tax is: %1.3f \n",tax);
+        // }else if(income > 10000 && income <= 50000){
+        //     tax = income * 10/100;
+        //     printf("Your tax is: %1.3f \n",tax);
+        // }else if(income > 50000 && income <= 100000){
+        //     tax = income * 20/100;
+        //     printf("Your tax is: %1.3f \n",tax);
+        // }else if(income > 100000){
+        //     tax = income * 30/100;
+        //     printf("Your tax is: %1.3f \n",tax);
+        // }else{
+        //     printf("Please inter valid amount");
+        // }
+    
+    //calculaye discount per items
+        float items, total, discount;
+        printf("How many items did you buy? : ")
+        scanf("%1.2f", &items);
+        printf("What is your total amount? : ");
+        scanf("%1.2f", &total);
+        if (items > 1 && items <= 10){
+            discount = total*5/100;
+            printf("Your final amount after discount is: \n");
+            scanf("%1.2f", &discount);
+        }else if (items > 1 && items <= 10){
+            discount = total*10/100;
+            printf("Your final amount after discount is: \n");
+            scanf("%1.2f", &discount);
+        }else if (items > 50){
+            discount = total*15/100;
+            printf("Your final amount after discount is: \n");
+            scanf("%1.2f", &discount);
+        }else{
+            printf("Invalid input. Please try again.")
+        }
 }
