@@ -67,9 +67,9 @@ int main(){
     
     //calculaye discount per items
         float items, total, discount;
-        printf("How many items did you buy? : ")
+        printf("How many items did you buy? : ");
         scanf("%1.2f", &items);
-        printf("What is your total amount? : ");
+        printf("What is your total amount? : \n");
         scanf("%1.2f", &total);
         if (items > 1 && items <= 10){
             discount = total*5/100;
@@ -84,6 +84,6 @@ int main(){
             printf("Your final amount after discount is: \n");
             scanf("%1.2f", &discount);
         }else{
-            printf("Invalid input. Please try again.")
+            printf("Invalid input. Please try again. \n");
         }
 }
