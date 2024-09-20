@@ -40,4 +40,3 @@ void addtion(int a, int b){
 void subtraction(int c, int d){
     printf("Sub is %d", c-d);
 }
-
