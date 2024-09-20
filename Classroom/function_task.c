@@ -6,10 +6,13 @@ int mul(int, int);
 
 int main(){
     int first,second,choice;
+    int i = 1;
+    char c;
+    come_here:
+    while (i){
     printf("Chose option(1-3) \n");
     printf("1. Addition \n2. Subtraction \n3. Multiplication \n");
     scanf("%d",&choice);
-
     if (choice <= 3 && choice > 0){
         printf("Enter first number: ");
         scanf("%d",&first);
@@ -38,6 +41,16 @@ int main(){
     }
 }
 
+printf("Continue? (y/n) \n");
+scanf(" %c", &c);
+if(c=='y'){
+    goto come_here;
+}else if(c=='n'){
+    return 0;
+}else{
+    printf("Invalid choice \n");
+}
+}
 int add(int a, int b){
     return a+b;
 }
