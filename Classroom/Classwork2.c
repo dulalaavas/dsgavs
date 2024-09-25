@@ -31,21 +31,67 @@
 // }
 
 //print Fibonacci series using recursion
-        // Generates Fibonacci series correctly for a given number of terms
+// void fibo(int);
+// int main() {
+//     int a = 0, b = 1, count =5;
+//     printf("%d \n%d \n",a,b);
+//     fibo(count -2);
+// }
+// void fibo(int num){
+//     static int a = 0, b = 1,c;
+//     if (num > 0){
+//         c = a + b;
+//         printf("%d \n",c);
+//         a=b;
+//         b=c;
+//         fibo(num-1);
+//     }
+// }
 
-void fibo(int);
-int main() {
-    int a = 0, b = 1, count =5;
-    printf("%d \n%d \n",a,b);
-    fibo(count -2);
+//check palindrome numbers
+// int palindrome(int);
+// int main(){
+//     int num;
+//         printf("Enter any number:");
+//         scanf("%d",&num);
+//         if (palindrome(num)){
+//             printf("It is palindrome.");
+//         }else{
+//             printf("It is not palindrome.");
+//         }
+// }
+// int palindrome(int num){
+//     int ori = num;
+//     int rev = 0;
+//     while(num > 0){
+//         int dig = num % 10;
+//         rev = (rev * 10) + dig;
+//         num = num / 10;
+//     }
+//     return ori==rev;
+// }
+
+//check armstrong numbers
+int armstrong(int);
+int main(){
+    int num;
+        printf("Enter any number:");
+        scanf("%d",&num);
+
+        if (armstrong(num)){
+            printf("It is an armstrong number.");
+        }else{
+            printf("It is not an armstrong number.");
+        }
 }
-void fibo(int num){
-    static int a = 0, b = 1,c;
-    if (num > 0){
-        c = a + b;
-        printf("%d \n",c);
-        a=b;
-        b=c;
-        fibo(num-1);
+int armstrong(int num){
+    int ori = num;
+    int rev = 0;
+
+    while(num > 0){
+        int dig = num % 10;
+        rev = (dig*dig*dig*dig)+rev;
+        num = num / 10;
     }
+    return ori==rev;
 }
