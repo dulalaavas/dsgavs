@@ -89,23 +89,56 @@
 // }
 
 // to calculate factorial using recursion
-int factorial(int n) {
-    if (n == 0 || n == 1) {
-        return 1;
-    } else {
-        return n * factorial(n - 1);
-    }
-}
-void print_factorials(int limit) {
-    for (int i = 1; i <= limit; i++) {
-        printf("Factorial of %d is %d\n", i, factorial(i));
-    }
-}
-int main() {
-    int limit;
-    printf("Enter the limit for natural numbers: ");
-    scanf("%d", &limit);
-    print_factorials(limit);
-    return 0;
-}
+// int factorial(int n) {
+//     if (n == 0 || n == 1) {
+//         return 1;
+//     } else {
+//         return n * factorial(n - 1);
+//     }
+// }
+// void print_factorials(int limit) {
+//     for (int i = 1; i <= limit; i++) {
+//         printf("Factorial of %d is %d\n", i, factorial(i));
+//     }
+// }
+// int main() {
+//     int limit;
+//     printf("Enter the limit for natural numbers: ");
+//     scanf("%d", &limit);
+//     print_factorials(limit);
+//     return 0;
+// }
 
+//swap three variables without using a temporary variable
+    // int main(){
+    // int a = 10;int b = 20;int c = 30;
+    // printf("The value of a is %d \n", a);
+    // printf("The value of b is %d \n", b);
+    // printf("The value of c is %d \n", c);
+    // a = a + b + c;
+    // b = a - (b + c);
+    // c = a - (b + c);
+    // a = a - (b + c);  
+    // printf("The new value of a is %d \n", a);
+    // printf("The new value of b is %d \n", b);
+    // printf("The new value of c is %d \n", c);
+    // }
+
+//check if number is prime or not
+// int main(){
+//     int x,y=0;
+//     printf("Enter a positive number:");
+//     scanf("%d",&x);
+//     for(int z=1;z<=x;z++)
+//     {
+//         if(x%z==0){
+//             y++;
+//         }
+//     }
+//     if(y==2){
+//         printf("Given number is Prime");
+//     }
+//     else{
+//         printf("Given number is Composite");
+//     }
+// }
