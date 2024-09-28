@@ -71,27 +71,41 @@
 //     return ori==rev;
 // }
 
-//check armstrong numbers
-int armstrong(int);
-int main(){
-    int num;
-        printf("Enter any number:");
-        scanf("%d",&num);
+//print all natural number using recursion
+// void printNaturalNumbers(int n) {
+//     if (n > 0) {
+//         printNaturalNumbers(n - 1); 
+//         printf("%d ", n); 
+//     }
+// }
+// int main() {
+//     int limit;
+//     printf("Enter the limit up to which you want to print natural numbers: ");
+//     scanf("%d", &limit);
+//     printf("Natural numbers from 1 to %d are: ", limit);
+//     printNaturalNumbers(limit); 
+//     printf("\n");
+//     return 0;
+// }
 
-        if (armstrong(num)){
-            printf("It is an armstrong number.");
-        }else{
-            printf("It is not an armstrong number.");
-        }
-}
-int armstrong(int num){
-    int ori = num;
-    int rev = 0;
-
-    while(num > 0){
-        int dig = num % 10;
-        rev = (dig*dig*dig*dig)+rev;
-        num = num / 10;
+// to calculate factorial using recursion
+int factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
     }
-    return ori==rev;
 }
+void print_factorials(int limit) {
+    for (int i = 1; i <= limit; i++) {
+        printf("Factorial of %d is %d\n", i, factorial(i));
+    }
+}
+int main() {
+    int limit;
+    printf("Enter the limit for natural numbers: ");
+    scanf("%d", &limit);
+    print_factorials(limit);
+    return 0;
+}
+
